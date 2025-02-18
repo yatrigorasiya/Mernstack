@@ -55,7 +55,7 @@ export const Adminupdate = ()=>{
                 method:"PATCH",
                 headers:{
                     "Content-Type":"application/json",
-                    Authorization:authoriztiontoken
+                     Authorization:authoriztiontoken
                     
                 },
                 body:JSON.stringify(data)
