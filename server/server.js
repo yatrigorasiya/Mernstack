@@ -1,6 +1,7 @@
 require("dotenv").config()
 
 const express = require("express")
+
 const cors = require("cors")
 const app = express();
 const router = require("./router/auth-router");
@@ -15,6 +16,7 @@ const corsoption = {
     methods:"GET,POST,PATCH,PUT,DELETE,HEAD",
     credentials:true
 }
+
 app.use(cors(corsoption))
 
 app.use(express.json())

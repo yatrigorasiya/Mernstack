@@ -13,7 +13,7 @@ const jwtToken = token.replace("Bearer","").trim();
 console.log("token from middleware",jwtToken)
 try {
     //token create :-userid,email,isadminshow
-    const isVerified = jwt.verify(jwtToken,process.env.SECRETE_KEY)
+    const isVerified = jwt.verify(jwtToken,process.env.SECRETE_KEY )
     // console.log(isVerified)
     //all data show:-userid,username,phone,email,password,isadmin
     const userData = await User.findOne({email:isVerified.email}).select({password:0})
